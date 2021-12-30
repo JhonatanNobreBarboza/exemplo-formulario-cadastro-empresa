@@ -3,46 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Cadastro de Fornecedores</title>
 </head>
 <body>
     <div class="container">
         <div class="data-empresa">
-            <form action="" method="post">
+            <h1>CADASTRO DE FORNECEDORES</h1>
+            <form action="assets/pages/result.html" method="post">
                 <div class="form-group">
-                    <label for="nome">Nome</label>
+                    <label for="razaoSocial">Razão Social</label>
                     <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome">
-                </div>
-                <div class="form-group">
+                    <label for="nomeFantasia">Nome Fantasia</label>
+                    <input type="text" name="fantasia" id="fantasia" class="form-control" placeholder="nome fantasia">
                     <label for="cnpj">CNPJ</label>
                     <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ">
+                    <label for="certidaoEstadual">Certidão Estadual</label>
+                    <input type="text" name="certidaoEstadual" id="cnpj" class="form-control" placeholder="certidao Estadual">
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
                     <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone">
-                </div>
-                <div class="form-group">
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
                 </div>
                 <div class="form-group">
                     <label for="endereco">Endereço</label>
                     <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço">
-                </div>
-                <div class="form-group">
                     <label for="cidade">Cidade</label>
                     <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade">
-                </div>
-                <div class="form-group">
                     <label for="estado">Estado</label>
                     <input type="text" name="estado" id="estado" class="form-control" placeholder="Estado">
-                </div>
-                <div class="form-group">
                     <label for="cep">CEP</label>
                     <input type="text" name="cep" id="cep" class="form-control" placeholder="CEP">
                 </div>
                 <div class="form-group">
-                    <label for="pais">País</label>
+                    <label for="contato">Contato</label>
+                    <input type="text" name="contato" id="contato" class="form-control" placeholder="Contato">
+                    <label for="cargo">Cargo</label>
+                    <input type="text" name="cargo" id="cargo" class="form-control" placeholder="Cargo">
+                </div>
+                <div class="form-group">
+                    <label for="situacaoCadastral">Situação Cadastral</label>
+                    <radio name="situacaoCadastral" id="situacaoCadastral" class="form-control" placeholder="situacaoCadastral">
+                        <option value="ativo">Ativo</option>
+                        <option value="inativo">Inativo</option>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Cadastrar</button>  
             </form>
         </div>
     </div>
