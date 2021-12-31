@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,50 +10,89 @@
     <div class="container">
         <div class="data-empresa">
             <h1>CADASTRO DE FORNECEDORES</h1>
-            <form action="assets/pages/result.html" method="post">
+            <form action="assets/pages/result.html" method="get">
                 <div class="form-group">
                     <label for="razaoSocial">Razão Social</label>
-                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome">
+                    <input type="text" name="nome" id="nome" class="form-control-1" placeholder="Nome" autofocus required>
                     <label for="nomeFantasia">Nome Fantasia</label>
-                    <input type="text" name="fantasia" id="fantasia" class="form-control" placeholder="nome fantasia">
+                    <input type="text" name="fantasia" id="fantasia" class="form-control-1" placeholder="nome fantasia" required>
                     <label for="cnpj">CNPJ</label>
-                    <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ">
-                    <label for="certidaoEstadual">Certidão Estadual</label>
-                    <input type="text" name="certidaoEstadual" id="cnpj" class="form-control" placeholder="certidao Estadual">
+                    <input type="text" minlength="14" maxlength="14" onkeypress="$(this).mask('00.000.000/0000-00')" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ" required>
                 </div>
                 <div class="form-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone">
+                    <label for="telefone" >Telefone</label>
+                    <input type="tel" name="telefone" minlength="10" maxlength="11" onkeypress="$(this).mask('(00) 0000-00009')" id="telefone" class="form-control" placeholder="Telefone" required>
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
+                    <label for="cep">CEP</label>
+                    <input type="text" minlength="8" maxlength="8" onkeypress="$(this).mask('00.000-000')" name="cep" id="cep" class="form-control" placeholder="CEP" required>
                 </div>
                 <div class="form-group">
                     <label for="endereco">Endereço</label>
-                    <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço">
+                    <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço" required>
                     <label for="cidade">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade">
+                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade" required>
                     <label for="estado">Estado</label>
-                    <input type="text" name="estado" id="estado" class="form-control" placeholder="Estado">
-                    <label for="cep">CEP</label>
-                    <input type="text" name="cep" id="cep" class="form-control" placeholder="CEP">
+                    <select name="estado" id="estado" class="form-control" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option> 
+                    </select>
+                    <label for="cargo">Cargo Responsável</label>
+                    <select name="cargo" id="cargo" class="form-control" required>
+                        <option value="">Selecione</option>
+                        <option value="1">Proprietario</option>
+                        <option value="2">Gerente</option>
+                        <option value="3">Diretor</option>
+                        <option value="4">Vendedor</option>
+                        <option value="5">Estagiário</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="contato">Contato</label>
-                    <input type="text" name="contato" id="contato" class="form-control" placeholder="Contato">
-                    <label for="cargo">Cargo</label>
-                    <input type="text" name="cargo" id="cargo" class="form-control" placeholder="Cargo">
-                </div>
-                <div class="form-group">
+                    <label for="certidaoEstadual">Certidão Estadual</label>
+                    <input type="text" name="certidaoEstadual" id="cnpj" class="form-control" placeholder="certidao Estadual" onkeypress="$(this).mask('00.000.000-0')">
                     <label for="situacaoCadastral">Situação Cadastral</label>
-                    <radio name="situacaoCadastral" id="situacaoCadastral" class="form-control" placeholder="situacaoCadastral">
-                        <option value="ativo">Ativo</option>
-                        <option value="inativo">Inativo</option>
+                    <input type="radio" id="situacaoCadastral"
+                    name="cad" value="ativo">
+                   <label for="cad1">Ativo</label>
+               
+                   <input class="form-group" type="radio" id="situacaoCadastral2"
+                    name="cad" value="inativo">
+                   <label for="cad2">Inativa</label>
+               
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn">Cadastrar</button>  
+                    <button type="submit" class="btn">Cadastrar</button> 
+                </div> 
             </form>
         </div>
     </div>
-    
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/jquery.mask.min.js"></script>
 </body>
 </html>

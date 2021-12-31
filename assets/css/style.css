@@ -1,3 +1,6 @@
+h1{
+    text-align: center;
+}
 .container{
     width: 100%;
     height: 100%;
@@ -5,7 +8,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: beige;
 }
 .form-group{
     padding: 10px;
+}
+.form-control-1{
+    width: 250px;
+    height: 25px;
+}
+.form-control{
+    width: 160px;
+    height: 25px;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    color: white;
+    
 }
